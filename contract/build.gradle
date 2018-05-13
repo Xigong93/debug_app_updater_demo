@@ -1,9 +1,11 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 27
+
+
+
     defaultConfig {
-        applicationId "com.pokercc.app_debug_updater_demo"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
@@ -14,23 +16,24 @@ android {
                 arguments = [ moduleName : project.getName() ]
             }
         }
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-
-    api project(':contract')
-    runtimeOnly project(':debug')
-
     testImplementation 'junit:junit:4.12'
+    api 'com.alibaba:arouter-api:1.3.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
 
 }

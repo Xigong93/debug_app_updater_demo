@@ -1,0 +1,3 @@
+[submodule "debug_script"]
+	path = debug_script
+	url = git@github.com:pokercc/debug_app_updater.git

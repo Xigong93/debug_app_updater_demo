@@ -1,0 +1,4 @@
+#!/bin/sh
+# 开发，上传apk到pgyer
+cd debug_script
+./start.sh
