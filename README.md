@@ -1,6 +1,12 @@
 # debug_app_updater_demo
 测试版本app更新demo
 
+# demo的运行方式
+* git clone demo
+* 运行 "git submodule update --init" 下载子模块
+* 获取pgyer 的appkey,apikey ,user key ,参考 [debug_app_updater](https://github.com/pokercc/debug_app_updater)的简单使用，改好配置文件
+* 在本工程的根目录执行 "sh ./upload" 进行测试
+
 
 ## 模块划分
 * app 主模块
