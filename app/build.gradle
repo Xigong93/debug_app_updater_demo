@@ -11,7 +11,7 @@ android {
         // add for arouter
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [moduleName: project.getName()]
             }
         }
     }
@@ -29,7 +29,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 
     api project(':contract')
-    runtimeOnly project(':debug')
+    debugRuntimeOnly project(':debug')
 
     testImplementation 'junit:junit:4.12'
 

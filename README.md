@@ -20,7 +20,7 @@ debug module 只在运行时起作用，编译时不起作用，隔离性非常�
 ```
 
 dependencies {
-    runtimeOnly project(':debug')
+    debugRuntimeOnly project(':debug')
 }
 ```
 ## 参考文档
